@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Porovnanie automobilov – CarSellAndCompare</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styl.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="brand" href="index.html">
+            <img src="img/logo.svg" alt="Logo CarSellAndCompare" width="40" height="40">
+            <span class="brand__name">CarSell<span>AndCompare</span></span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Zobraziť menu">
+        <label for="nav-toggle" class="nav-toggle-label" title="Menu"><span></span></label>
+
+        <nav class="main-nav" aria-label="Hlavná navigácia">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="#">Ponuky áut</a></li>
+                <li><a href="porovnanie.html" aria-current="page">Porovnanie <span class="badge">3</span></a></li>
+                <li><a href="#">Obľúbené</a></li>
+                <li><a href="#">Správy <span class="badge">2</span></a></li>
+                <li><a href="#">Moje ponuky</a></li>
+                <li class="nav-mobile-only"><a href="#">Odhlásiť</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-menu">
+            <span class="user-menu__avatar" aria-hidden="true">ŠŠ</span>
+            <span class="user-menu__name">Šimon Š.</span>
+            <a class="btn btn--small" href="#">Odhlásiť</a>
+        </div>
+    </div>
+</header>
+
+<main class="site-main">
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Navigačná cesta">
+            <ol>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="#">Ponuky áut</a></li>
+                <li>Porovnanie</li>
+            </ol>
+        </nav>
+
+        <h1 class="page-title">Porovnanie automobilov <small>3 autá</small></h1>
+
+        <form class="compare-toolbar" action="#" aria-label="Nastavenia porovnania">
+            <label class="switch">
+                <input type="checkbox" name="len-rozdiely">
+                Zobraziť len rozdiely
+            </label>
+            <label class="switch">
+                <input type="checkbox" name="najlepsie" checked>
+                Zvýrazniť najlepšie hodnoty ★
+            </label>
+            <div class="compare-toolbar__actions">
+                <button type="button" class="btn">✕ Vymazať všetko</button>
+            </div>
+        </form>
+
+        <section class="compare-wrapper" aria-label="Porovnávacia tabuľka">
+            <table class="compare">
+                <caption class="visually-hidden">Porovnanie parametrov vybraných automobilov</caption>
+                <thead>
+                <tr>
+                    <th scope="col" class="compare__param-col">Automobil</th>
+                    <th scope="col">
+                        <article class="car">
+                            <div class="car__photo">
+                                <img src="img/auto.svg" alt="Škoda Octavia Combi" width="320" height="200">
+                                <button type="button" class="btn btn--icon car__remove" title="Odobrať z porovnania">✕</button>
+                            </div>
+                            <h2 class="car__title"><a href="#">Škoda Octavia Combi</a></h2>
+                            <div class="car__meta">
+                                <span class="car__price">18 900 €</span>
+                                <button type="button" class="btn btn--icon car__fav" aria-pressed="false" title="Pridať medzi obľúbené">♡</button>
+                            </div>
+                        </article>
+                    </th>
+                    <th scope="col">
+                        <article class="car">
+                            <div class="car__photo">
+                                <img src="img/auto.svg" alt="Volkswagen Golf VIII" width="320" height="200">
+                                <button type="button" class="btn btn--icon car__remove" title="Odobrať z porovnania">✕</button>
+                            </div>
+                            <h2 class="car__title"><a href="#">VW Golf VIII</a></h2>
+                            <div class="car__meta">
+                                <span class="car__price">21 500 €</span>
+                                <button type="button" class="btn btn--icon car__fav" aria-pressed="true" title="Odobrať z obľúbených">♥</button>
+                            </div>
+                        </article>
+                    </th>
+                    <th scope="col">
+                        <article class="car">
+                            <div class="car__photo">
+                                <img src="img/auto.svg" alt="Hyundai i30 Wagon" width="320" height="200">
+                                <button type="button" class="btn btn--icon car__remove" title="Odobrať z porovnania">✕</button>
+                            </div>
+                            <h2 class="car__title"><a href="#">Hyundai i30 Wagon</a></h2>
+                            <div class="car__meta">
+                                <span class="car__price">16 700 €</span>
+                                <button type="button" class="btn btn--icon car__fav" aria-pressed="false" title="Pridať medzi obľúbené">♡</button>
+                            </div>
+                        </article>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Cena</th>
+                    <td data-car="Octavia">18 900 €</td>
+                    <td data-car="Golf">21 500 €</td>
+                    <td data-car="i30" class="best">16 700 €</td>
+                </tr>
+                <tr>
+                    <th scope="row">Rok výroby</th>
+                    <td data-car="Octavia">2020</td>
+                    <td data-car="Golf" class="best">2022</td>
+                    <td data-car="i30">2019</td>
+                </tr>
+                <tr>
+                    <th scope="row">Najazdené km</th>
+                    <td data-car="Octavia">98 000 km</td>
+                    <td data-car="Golf" class="best">41 000 km</td>
+                    <td data-car="i30">76 500 km</td>
+                </tr>
+                <tr>
+                    <th scope="row">Palivo</th>
+                    <td data-car="Octavia">Diesel</td>
+                    <td data-car="Golf">Benzín</td>
+                    <td data-car="i30">Benzín</td>
+                </tr>
+                <tr>
+                    <th scope="row">Prevodovka</th>
+                    <td data-car="Octavia">Automatická (DSG)</td>
+                    <td data-car="Golf">Manuálna</td>
+                    <td data-car="i30">Manuálna</td>
+                </tr>
+                <tr>
+                    <th scope="row">Výkon</th>
+                    <td data-car="Octavia" class="best">110 kW</td>
+                    <td data-car="Golf">96 kW</td>
+                    <td data-car="i30">88 kW</td>
+                </tr>
+                <tr>
+                    <th scope="row">Objem motora</th>
+                    <td data-car="Octavia">1 968 cm³</td>
+                    <td data-car="Golf">1 498 cm³</td>
+                    <td data-car="i30">1 482 cm³</td>
+                </tr>
+                <tr>
+                    <th scope="row">Karoséria</th>
+                    <td data-car="Octavia">Kombi</td>
+                    <td data-car="Golf">Hatchback</td>
+                    <td data-car="i30">Kombi</td>
+                </tr>
+                <tr>
+                    <th scope="row">Predajca</th>
+                    <td data-car="Octavia">Peter K. · Žilina</td>
+                    <td data-car="Golf">AutoCentrum s.r.o. · Martin</td>
+                    <td data-car="i30">Jana M. · Trnava</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container site-footer__inner">
+        <span>© 2026 CarSellAndCompare</span>
+        <nav aria-label="Odkazy v pätičke">
+            <ul>
+                <li><a href="#">O projekte</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <span class="site-footer__author">Šimon Šafranko · VAII</span>
+    </div>
+</footer>
+
+</body>
+</html>
